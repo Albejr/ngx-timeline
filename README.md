@@ -1,27 +1,36 @@
-# NgxTimeline
+# Albe Timeline <sup>1.0.0</sup>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.2.
+![coming-soon](https://user-images.githubusercontent.com/24717256/48868632-62fcb600-edc1-11e8-8d84-d66289a517f4.png)
 
-## Development server
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
+```html
+$ npm install ngx-timeline-albe
+```
 
-## Code scaffolding
+## Usage
+### Import the module
+```typescript
+import { NgxTimelineAlbeModule } from 'ngx-timeline-albe';
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+@NgModule({
+    imports: [ NgxTimelineAlbeModule ],
+    ...
+})
+export class AppModule {}
+```
 
-## Build
+### Template
+```html
+<ngx-timeline></ngx-timeline>
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Demo App
+Follow these instructions to run the demo:
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+1. Clone the repository to your local machine
+2. From the project folder, run `npm i` to install all required dependencies
+3. Run `ng b ngx-timeline-albe` to build in **dist** folder.
+4. Run `ng s` to serve the project from a live-updating server.
+5. Go to `localhost:4200` to see the demo site
