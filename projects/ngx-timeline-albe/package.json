@@ -4,6 +4,7 @@
   "description": "Component for rendering timelines from the your data.",
   "keywords": [
     "angular",
+    "component",
     "timeline"
   ],
   "author": "Albertino Júnior (http://albertino.eti.br)",
