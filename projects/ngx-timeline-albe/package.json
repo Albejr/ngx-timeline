@@ -1,0 +1,23 @@
+{
+  "name": "ngx-timeline-albe",
+  "version": "1.0.0",
+  "description": "Component for rendering timelines from the your data.",
+  "keywords": [
+    "angular",
+    "timeline"
+  ],
+  "author": "Albertino Júnior (http://albertino.eti.br)",
+  "license": "Unlicense",
+  "homepage": "https://github.com/Albejr/ngx-timeline#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Albejr/ngx-timeline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Albejr/ngx-timeline/issues"
+  },
+  "peerDependencies": {
+    "@angular/common": "^7.0.0",
+    "@angular/core": "^7.0.0"
+  }
+}
