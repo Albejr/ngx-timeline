@@ -10,15 +10,12 @@ Describe your issue here.
 #### Current behavior:
 
 
-### Error Message:
+#### Error Message:
 ```
 Copy the error message
 ```
 
 #### Steps to reproduce:
-
-
-#### What is the use-case or motivation for changing an existing behavior?
 
 
 #### Which versions of package?
