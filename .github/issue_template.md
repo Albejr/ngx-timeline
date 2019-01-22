@@ -1,25 +1,30 @@
-### I'm submitting a ...
+#### I'm submitting a ...
 <!--  (check one with "x") -->
-[ ] bug report
-[ ] feature request
-[ ] proposal
+- [ ] bug report
+- [ ] feature request
+- [ ] proposal
 
-### What is the expected behavior?
+#### What is the expected behavior?
 Describe your issue here.
 
-### Current behavior
+#### Current behavior:
 
 
-### Steps to reproduce
+### Error Message:
+```
+Copy the error message
+```
+
+#### Steps to reproduce:
 
 
-### What is the use-case or motivation for changing an existing behavior?
+#### What is the use-case or motivation for changing an existing behavior?
 
 
-### Which versions of package?
+#### Which versions of package?
 >1.x
 
-### Other information
+#### Other information:
 
 
-### Screenshots
+#### Screenshots:
