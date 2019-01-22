@@ -1,4 +1,4 @@
-# Albe Timeline <sup>1.0.0</sup>
+# Albe Timeline <sup>1.1.0</sup>
 
 ![coming-soon](https://user-images.githubusercontent.com/24717256/48868632-62fcb600-edc1-11e8-8d84-d66289a517f4.png)
 

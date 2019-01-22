@@ -1,8 +1,8 @@
-# Albe Timeline <sup>1.0.0</sup>
+# Albe Timeline <sup>1.1.0</sup>
 
 ![coming-soon](https://user-images.githubusercontent.com/24717256/48868632-62fcb600-edc1-11e8-8d84-d66289a517f4.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.4
 
 ## Installation
 ```html
