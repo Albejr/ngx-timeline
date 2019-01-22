@@ -1,22 +1,25 @@
-### Bug, feature request, or proposal:
-Describe your issue here.
+### I'm submitting a ...
+<!--  (check one with "x") -->
+[ ] bug report
+[ ] feature request
+[ ] proposal
 
 ### What is the expected behavior?
+Describe your issue here.
+
+### Current behavior
 
 
-### What is the current behavior?
-
-
-### What are the steps to reproduce?
+### Steps to reproduce
 
 
 ### What is the use-case or motivation for changing an existing behavior?
 
 
-### Which versions of package are affected?
->1.0.0
+### Which versions of package?
+>1.x
 
-### Is there anything else we should know?
+### Other information
 
 
 ### Screenshots
