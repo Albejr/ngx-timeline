@@ -38,5 +38,13 @@ export class AppComponent {
         content: '2 - Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui.'
       }]
     }
+    ,
+    {
+      datetime: '2019-01-22 15:38:00',
+      body: [{
+        tag: '',
+        content: 'Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui.'
+      }]
+    }
   ];
 }

@@ -5,16 +5,19 @@
     <ng-container *ngFor="let item of itens; let even = even; let odd=odd;">
       <article [class.odd]="even" [class.odd]="odd">
         <header *ngIf="item.header">
-          <p>{{item.header}}</p>
+          {{item.header}}
         </header>
-        <p>{{item.datetime | date: formatDate}}</p>
-        <ng-container *ngFor="let itemBody of item.body;"> <!-- trackBy: trackByFnBody; -->
-          <div [innerHtml]="itemBody.content"></div>
+        <span>{{item.datetime | date: formatDate}}</span>
+        <ng-container *ngFor="let itemBody of item.body;">
+          <div *replaceTag="itemBody.tag">
+            {{itemBody.content}}
+          </div>
         </ng-container>
         <footer *ngIf="item.footer">
           <p>{{item.footer}}</p>
         </footer>
       </article>
+      <hr>
     </ng-container>
   </section>
 </div>

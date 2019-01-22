@@ -61,10 +61,4 @@ export class NgxTimelineAlbeComponent implements OnInit {
     this.emptyContent = I18n[this.language].messageForEmptyContent;
   }
 
-  trackByFnBody(index: number, item: ItemBody) {
-    console.log(`<${item.tag}>${item.content}</${item.tag}>`);
-
-    return index;
-  }
-
 }
