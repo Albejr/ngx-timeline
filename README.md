@@ -2,6 +2,9 @@
 
 ![coming-soon](https://user-images.githubusercontent.com/24717256/48868632-62fcb600-edc1-11e8-8d84-d66289a517f4.png)
 
+- Content HTML structure is highly manipulable.
+- Styles for the template are easily customizable.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1
 
 ## Installation
@@ -34,3 +37,6 @@ Follow these instructions to run the demo:
 3. Run `ng b ngx-timeline-albe` to build in **dist** folder.
 4. Run `ng s` to serve the project from a live-updating server.
 5. Go to `localhost:4200` to see the demo site
+
+
+>Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline
