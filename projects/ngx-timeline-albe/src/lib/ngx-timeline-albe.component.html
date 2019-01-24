@@ -1,16 +1,16 @@
 <div *ngIf="itens && itens.length > 0; else msgEmpty">
   <nav *ngIf="showMenu">
+      <a *ngFor="let item of itens; let i = index;" [attr.href]="'#' + (i + 1998)">[ {{i + 1998}} ]</a>
   </nav>
   <section>
-    <ng-container *ngFor="let item of itens; let even = even; let odd=odd;">
+    <ng-container *ngFor="let item of itens; let even = even; let odd = odd;">
       <article [class.odd]="even" [class.odd]="odd">
         <header *ngIf="item.header">
           {{item.header}}
         </header>
         <span>{{item.datetime | date: formatDate}}</span>
         <ng-container *ngFor="let itemBody of item.body;">
-          <div *replaceTag="itemBody.tag">
-            {{itemBody.content}}
+          <div *replaceTag="itemBody.tag" [innerHTML]="itemBody.content">
           </div>
         </ng-container>
         <footer *ngIf="item.footer">

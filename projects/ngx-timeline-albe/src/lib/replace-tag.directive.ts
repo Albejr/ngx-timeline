@@ -14,11 +14,8 @@ export class ReplaceTagDirective implements AfterViewChecked {
 
   @Input('replaceTag')
   set tag(t: string) {
-    if (!t) {
-      t = 'span';
-    }
 
-    this._tag = t;
+    this._tag = (!t) ? 'span' : t;
     this._needUpdate = true;
 
     this.viewContainer.clear();
@@ -45,9 +42,6 @@ export class ReplaceTagDirective implements AfterViewChecked {
     if (template) {
       let r = document.createElement(this._tag);
       r.innerHTML = template.innerHTML;
-
-      console.log(r);
-      console.log(template);
 
       this.templateRef.elementRef.nativeElement.parentNode.replaceChild(r, template);
       this.templateRef.elementRef.nativeElement.innerHTML = template.innerHTML;
