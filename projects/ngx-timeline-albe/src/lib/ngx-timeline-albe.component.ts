@@ -19,46 +19,63 @@ const DEFAULT_OPTIONS: any = {
 export class NgxTimelineAlbeComponent implements OnInit {
 
   emptyContent: string;
+  lstGroup: Array<number>;
 
   //List of itens
-  @Input() 
-  itens: Array<TimelineItem>;
+  @Input()
+  itens: Array<TimelineItem> | String;
   //Effect of presentation
   //'fadeInUp', 'bounceIn', etc
-  @Input() 
+  @Input()
   effect: string = DEFAULT_OPTIONS.effect;
   //Sets the visibility of the annual grouper
-  @Input() 
+  @Input()
   showGroup: boolean = DEFAULT_OPTIONS.showGroup;
   //Sets the anchor menu visibility for annual groupings (depends on 'showGroup')
-  @Input() 
+  @Input()
   showMenu: boolean = DEFAULT_OPTIONS.showMenu;
   //Specifies the display language of texts (i18n)
-  @Input() 
+  @Input()
   language: string = DEFAULT_OPTIONS.language;
   //Sets the date display format
   //'dd/MM/yyyy', 'dd de MMMM de yyyy HH:mm:ss', etc
-  @Input() 
+  @Input()
   formatDate: string = DEFAULT_OPTIONS.formatDate;
   //Defines ordering of items
   //true: Descendente
   //false: Ascendente
-  @Input() 
+  @Input()
   sortDesc: boolean = DEFAULT_OPTIONS.sortDesc;
 
   constructor() {
   }
 
   ngOnInit() {
-    this.itens = this.itens.sort((a, b) => {
-      return (this.sortDesc) ?
-        (Date.parse(b['datetime']) - Date.parse(a['datetime'])) :
-        (Date.parse(a['datetime']) - Date.parse(b['datetime']));
-    });
+
+    // Se for passado 'string', convert para 'object'.
+    if (typeof (this.itens) == 'string') {
+      this.itens = JSON.parse(this.itens);
+    }
+
+    // Ordena pela data.
+    this.itens = (<Array<TimelineItem>>this.itens)
+      .sort((a: TimelineItem, b: TimelineItem) => {
+        return (this.sortDesc) ?
+          ((+new Date(b.datetime)) - (+new Date(a.datetime))) :
+          ((+new Date(a.datetime)) - (+new Date(b.datetime)));
+      });
+
+    this.lstGroup = this.itens
+      .map(g => new Date(g.datetime).getFullYear())
+      .filter((value, index, self) => self.indexOf(value) === index);
   }
 
   ngOnChanges() {
     this.emptyContent = I18n[this.language].messageForEmptyContent;
+  }
+
+  getAnchorID(d: any): string {   
+    return 'Y' + new Date(d).getFullYear();
   }
 
 }

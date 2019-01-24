@@ -39,4 +39,10 @@ Follow these instructions to run the demo:
 5. Go to `localhost:4200` to see the demo site
 
 
+## To do
+- [ ] Se for passado 'string', converter para 'object'.
+- [ ] Exibe mensagem padão.
+- [ ] Inserir animação.
+- [x] Ordenar itens pela data.
+
 >Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline

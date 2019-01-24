@@ -14,7 +14,7 @@ export interface ItemBody {
 }
 
 export interface TimelineItem {
-    datetime: string;
+    datetime: Date;
     icon?: string;
     header?: string;
     body: ItemBody[];

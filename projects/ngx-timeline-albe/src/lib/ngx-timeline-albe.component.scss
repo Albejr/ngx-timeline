@@ -1,0 +1,28 @@
+nav {
+  height: 50px;
+  text-align: center;
+  display: table;
+
+  a {
+    display: inline;
+
+    position: relative;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    padding-top: 20px;
+    color: #000;
+    font-weight: bold;
+    border-bottom: 5px solid transparent;
+
+    &:hover {
+      color: #EF693A;
+      border-bottom: 5px solid #EF693A;
+      font-weight: normal;
+    }
+  }
+}

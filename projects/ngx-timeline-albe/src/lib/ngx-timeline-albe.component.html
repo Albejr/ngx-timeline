@@ -1,6 +1,7 @@
 <div *ngIf="itens && itens.length > 0; else msgEmpty">
-  <nav *ngIf="showMenu">
-      <a *ngFor="let item of itens; let i = index;" [attr.href]="'#' + (i + 1998)">[ {{i + 1998}} ]</a>
+  <!-- A exibição do menu depende da definição de visibilidade do agrupador. -->
+  <nav *ngIf="showGroup && showMenu">
+    <a *ngFor="let y of lstGroup; let i = index;" routerLink="timeline-albe" [attr.fragment]="('Y'+ y)">{{y}}</a>
   </nav>
   <section>
     <ng-container *ngFor="let item of itens; let even = even; let odd = odd;">
@@ -17,7 +18,7 @@
           <p>{{item.footer}}</p>
         </footer>
       </article>
-      <hr>
+      <hr [attr.id]="getAnchorID(item.datetime)">
     </ng-container>
   </section>
 </div>
