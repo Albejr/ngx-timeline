@@ -1,4 +1,4 @@
-<div *ngIf="lstGroup && lstGroup.length > 0; else msgEmpty">
+<div id="timeline-albe" *ngIf="lstGroup && lstGroup.length > 0; else msgEmpty">
   <!-- A exibição do menu depende da definição de visibilidade do agrupador. -->
   <nav *ngIf="showGroup && showMenu">
     <a *ngFor="let group of lstGroup; let i = index;" [attr.href]="('#Y'+ group.Key)">{{group.Key}}</a>

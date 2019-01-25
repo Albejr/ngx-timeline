@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import { ItemBody, TimelineItem } from './TimelineItem';
 import { I18n } from './i18n';
 
@@ -14,7 +14,8 @@ const DEFAULT_OPTIONS: any = {
 @Component({
   selector: 'ngx-timeline',
   templateUrl: './ngx-timeline-albe.component.html',
-  styleUrls: ['./ngx-timeline-albe.component.scss']
+  styleUrls: ['./ngx-timeline-albe.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class NgxTimelineAlbeComponent implements OnInit {
 
