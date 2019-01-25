@@ -19,7 +19,7 @@ const DEFAULT_OPTIONS: any = {
 export class NgxTimelineAlbeComponent implements OnInit {
 
   emptyContent: string;
-  lstGroup: Array<number>;
+  lstGroup: Array<any>;
 
   //List of itens
   @Input()
@@ -65,17 +65,43 @@ export class NgxTimelineAlbeComponent implements OnInit {
           ((+new Date(a.datetime)) - (+new Date(b.datetime)));
       });
 
-    this.lstGroup = this.itens
-      .map(g => new Date(g.datetime).getFullYear())
-      .filter((value, index, self) => self.indexOf(value) === index);
+      this.lstGroup = this.groupBy(this.itens);
   }
 
   ngOnChanges() {
     this.emptyContent = I18n[this.language].messageForEmptyContent;
   }
 
-  getAnchorID(d: any): string {   
+  getAnchorID(d: any): string {
     return 'Y' + new Date(d).getFullYear();
+  }
+
+  groupBy(colecao: Array<TimelineItem>) {
+    var agrupado = [];
+
+    colecao.forEach(i => {
+
+      const d1 = new Date(i.datetime).getFullYear();
+      let foiAgrupado = false;
+
+      agrupado.forEach(j => {
+
+        if (d1 == j.Key) {
+          j.Elements.push(i);
+          foiAgrupado = true;
+        }
+      });
+
+      if (!foiAgrupado) {
+        agrupado.push({
+          Key: d1,
+          Elements: [i]
+        });
+      }
+
+    });
+    
+    return agrupado;
   }
 
 }

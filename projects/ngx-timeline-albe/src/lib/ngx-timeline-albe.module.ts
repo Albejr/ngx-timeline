@@ -15,7 +15,7 @@ import { ReplaceTagDirective } from './replace-tag.directive';
     RouterModule.forRoot([], {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
-      //scrollOffset: [0, 64] // [x, y]
+      scrollOffset: [0, 50] // [x, y]
     })
   ],
   exports: [NgxTimelineAlbeComponent]
