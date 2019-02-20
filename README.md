@@ -5,7 +5,7 @@
 - Content HTML structure is highly manipulable.
 - Styles for the template are easily customizable.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.5
 
 ## Installation
 ```html
@@ -26,7 +26,7 @@ export class AppModule {}
 
 ### Template
 ```html
-<ngx-timeline></ngx-timeline>
+<ngx-timeline [itens]="data"></ngx-timeline>
 ```
 
 ## Demo App

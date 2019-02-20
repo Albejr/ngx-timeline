@@ -22,7 +22,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
   emptyContent: string;
   lstGroup: Array<any>;
 
-  isSimple: boolean = true;
+  isSimple: boolean = false;
 
   //List of itens
   @Input()

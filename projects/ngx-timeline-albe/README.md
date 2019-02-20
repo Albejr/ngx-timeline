@@ -2,7 +2,7 @@
 
 ![coming-soon](https://user-images.githubusercontent.com/24717256/48868632-62fcb600-edc1-11e8-8d84-d66289a517f4.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.1
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.5
 
 ## Installation
 ```html
@@ -23,7 +23,7 @@ export class AppModule {}
 
 ### Template
 ```html
-<ngx-timeline></ngx-timeline>
+<ngx-timeline [itens]="data"></ngx-timeline>
 ```
 
 ## Demo App

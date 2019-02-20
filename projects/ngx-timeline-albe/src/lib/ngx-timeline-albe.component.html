@@ -5,15 +5,16 @@
   </nav>
 
   <ng-container *ngFor="let group of lstGroup; index as i1;">
-    <section [attr.id]="('Y'+ group.Key)">
+    <section>
+      <header *ngIf="showGroup" [attr.id]="('Y'+ group.Key)" class="group">{{group.Key}}</header>
       <article *ngFor="let element of group.Elements; index as i2; even as isEven; odd as isOdd;" [class.even]="isEven"
         [class.odd]="isOdd" [class.inverted]="((i1 + i2) % 2 === 1) || isSimple">
+        <span>{{element.datetime | date: formatDate}}</span>
         <header *ngIf="element.header">
           {{element.header}}
         </header>
-        <span>{{element.datetime | date: formatDate}}</span>
-        <div class="badge success">
-          <i class="material-icons">extension</i>
+        <div class="badge">
+          <i *ngIf="element.icon" class="material-icons">{{element.icon}}</i>
         </div>
         <div class="body">
           <ng-container *ngFor="let itemBody of element.body;">
