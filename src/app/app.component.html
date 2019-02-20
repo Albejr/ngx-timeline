@@ -2,16 +2,47 @@
 
 <pre>{{data | json}}</pre>
 
-<ngx-timeline [itens]="data" [formatDate]="'dd/MM/yyyy HH:mm:ss'"></ngx-timeline>
+<form [formGroup]="formulario">
+  <fieldset>
+    <legend>Show Navigation</legend>
+    <label>
+      <input type="radio" [value]="true" formControlName="showMenu" [checked]="true">
+      <span>YES</span>
+    </label>
+    <label>
+      <input type="radio" [value]="false" formControlName="showMenu">
+      <span>NO</span>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Show Group</legend>
+    <label>
+      <input type="radio" [value]="true" formControlName="showGroup" [checked]="true">
+      <span>YES</span>
+    </label>
+    <label>
+      <input type="radio" [value]="false" formControlName="showGroup">
+      <span>NO</span>
+    </label>
+  </fieldset>
+  <fieldset>
+    <legend>Sort Descedent</legend>
+    <label>
+      <input type="radio" [value]="true" formControlName="sortDesc" [checked]="true">
+      <span>YES</span>
+    </label>
+    <label>
+      <input type="radio" [value]="false" formControlName="sortDesc">
+      <span>NO</span>
+    </label>
+  </fieldset>
+  <span>Date Format</span>
+  <select formControlName="formatDate">
+    <option [value]="item" *ngFor="let item of dateFormats">{{item}}</option>
+  </select>
+</form>
 
-<hr>
-<hr>
-<hr>
+<pre>{{formulario.value | json}}</pre>
 
-<ngx-timeline [itens]="data" [language]="'en-US'" [showGroup]="false"></ngx-timeline>
-
-<hr>
-<hr>
-<hr>
-
-<ngx-timeline [itens]="data" [sortDesc]="false" [showMenu]="false"></ngx-timeline>
+<ngx-timeline [itens]="data" [formatDate]="formulario.value.formatDate" [sortDesc]="formulario.value.sortDesc"
+  [showMenu]="formulario.value.showMenu" [showGroup]="formulario.value.showGroup"></ngx-timeline>

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, Input, ViewEncapsulation, Inject, LOCALE_ID } from '@angular/core';
 import { ItemBody, TimelineItem } from './TimelineItem';
 import { I18n } from './i18n';
 
@@ -6,8 +6,8 @@ const DEFAULT_OPTIONS: any = {
   effect: 'zoomInUp',
   showGroup: true,
   showMenu: true,
-  language: 'pt-BR',
   formatDate: 'dd MMMM',
+  language: 'pt-BR',
   sortDesc: true
 };
 
@@ -37,9 +37,6 @@ export class NgxTimelineAlbeComponent implements OnInit {
   //Sets the anchor menu visibility for annual groupings (depends on 'showGroup')
   @Input()
   showMenu: boolean = DEFAULT_OPTIONS.showMenu;
-  //Specifies the display language of texts (i18n)
-  @Input()
-  language: string = DEFAULT_OPTIONS.language;
   //Sets the date display format
   //'dd/MM/yyyy', 'dd de MMMM de yyyy HH:mm:ss', etc
   @Input()
@@ -50,10 +47,15 @@ export class NgxTimelineAlbeComponent implements OnInit {
   @Input()
   sortDesc: boolean = DEFAULT_OPTIONS.sortDesc;
 
-  constructor() {
+  constructor(@Inject(LOCALE_ID) protected localeID: string) {
   }
 
   ngOnInit() {
+
+  }
+
+  ngOnChanges() {
+
     // Se for passado 'string', convert para 'object'.
     if (typeof (this.itens) == 'string') {
       this.itens = JSON.parse(this.itens);
@@ -68,10 +70,9 @@ export class NgxTimelineAlbeComponent implements OnInit {
       });
 
     this.lstGroup = this.groupBy(this.itens);
-  }
 
-  ngOnChanges() {
-    this.emptyContent = I18n[this.language].messageForEmptyContent;
+    //Specifies the display language of texts (i18n)
+    this.emptyContent = I18n[this.localeID] && I18n[this.localeID].messageForEmptyContent || I18n[DEFAULT_OPTIONS.language].messageForEmptyContent;
   }
 
   getAnchorID(d: any): string {
