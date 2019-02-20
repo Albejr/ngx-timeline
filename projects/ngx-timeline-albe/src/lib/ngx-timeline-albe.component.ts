@@ -22,6 +22,8 @@ export class NgxTimelineAlbeComponent implements OnInit {
   emptyContent: string;
   lstGroup: Array<any>;
 
+  isSimple: boolean = true;
+
   //List of itens
   @Input()
   itens: Array<TimelineItem> | String;
@@ -52,7 +54,6 @@ export class NgxTimelineAlbeComponent implements OnInit {
   }
 
   ngOnInit() {
-
     // Se for passado 'string', convert para 'object'.
     if (typeof (this.itens) == 'string') {
       this.itens = JSON.parse(this.itens);
@@ -66,7 +67,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
           ((+new Date(a.datetime)) - (+new Date(b.datetime)));
       });
 
-      this.lstGroup = this.groupBy(this.itens);
+    this.lstGroup = this.groupBy(this.itens);
   }
 
   ngOnChanges() {
@@ -101,7 +102,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
       }
 
     });
-    
+
     return agrupado;
   }
 
