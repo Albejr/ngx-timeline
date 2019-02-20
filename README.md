@@ -4,8 +4,9 @@
 
 - Content HTML structure is highly manipulable.
 - Styles for the template are easily customizable.
+- Simplifies the aspects of internationalization, displaying dates and alternatives texts in a local format.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.5
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2
 
 ## Installation
 ```html
@@ -41,8 +42,10 @@ Follow these instructions to run the demo:
 
 ## To do
 - [ ] Se for passado 'string', converter para 'object'.
-- [ ] Exibe mensagem padão.
+- [x] Exibe mensagem padão.
 - [ ] Inserir animação.
 - [x] Ordenar itens pela data.
+- [x] Multiplas linguagens.
+- [ ] Multiplos estilos.
 
 >Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline

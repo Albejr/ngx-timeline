@@ -2,7 +2,11 @@
 
 ![coming-soon](https://user-images.githubusercontent.com/24717256/48868632-62fcb600-edc1-11e8-8d84-d66289a517f4.png)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.2.5
+- Content HTML structure is highly manipulable.
+- Styles for the template are easily customizable.
+- Simplifies the aspects of internationalization, displaying dates and alternatives texts in a local format.
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2
 
 ## Installation
 ```html
@@ -34,3 +38,14 @@ Follow these instructions to run the demo:
 3. Run `ng b ngx-timeline-albe` to build in **dist** folder.
 4. Run `ng s` to serve the project from a live-updating server.
 5. Go to `localhost:4200` to see the demo site
+
+
+## To do
+- [ ] Se for passado 'string', converter para 'object'.
+- [x] Exibe mensagem padão.
+- [ ] Inserir animação.
+- [x] Ordenar itens pela data.
+- [x] Multiplas linguagens.
+- [ ] Multiplos estilos.
+
+>Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline
