@@ -8,7 +8,8 @@ const DEFAULT_OPTIONS: any = {
   showMenu: true,
   formatDate: 'dd MMMM',
   language: 'pt-BR',
-  sortDesc: true
+  sortDesc: true,
+  theme: 'basic'
 };
 
 @Component({
@@ -21,8 +22,6 @@ export class NgxTimelineAlbeComponent implements OnInit {
 
   emptyContent: string;
   lstGroup: Array<any>;
-
-  isSimple: boolean = false;
 
   //List of itens
   @Input()
@@ -46,6 +45,9 @@ export class NgxTimelineAlbeComponent implements OnInit {
   //false: Ascendente
   @Input()
   sortDesc: boolean = DEFAULT_OPTIONS.sortDesc;
+  //Defines the style
+  @Input()
+  theme: string = DEFAULT_OPTIONS.theme;
 
   constructor(@Inject(LOCALE_ID) protected localeID: string) {
   }

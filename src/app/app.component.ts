@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   formulario: FormGroup;
   dateFormats: Array<string> = ['dd MMMM', 'dd/MM/yyyy HH:mm:ss', 'MM/dd/yyyy', 'yyyy/MM/dd'];
+  themes: Array<string> = ['basic', 'minimalist', 'vertical', 'horizontal'];
   data: Array<TimelineItem>;
 
   constructor(fb: FormBuilder) {
@@ -19,7 +20,8 @@ export class AppComponent implements OnInit {
       showMenu: [true],
       showGroup: [true],
       sortDesc: [true],
-      formatDate: ['dd MMMM']
+      formatDate: ['dd MMMM'],
+      theme: 'basic'
     });
 
   }

@@ -1,3 +1,14 @@
-::ng-deep #timeline-albe section {
-  border: blue 2px solid;
+// ::ng-deep #timeline-albe section {
+//   border: blue 2px solid;
+// }
+
+fieldset {
+  float: left;
+  width: 150px;
+}
+
+.centro {
+  background-color: #EFEFEF;
+  margin: 0 auto;
+  width: 90%;
 }

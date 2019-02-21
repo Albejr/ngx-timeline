@@ -1,4 +1,4 @@
-<div id="timeline-albe" *ngIf="lstGroup && lstGroup.length > 0; else msgEmpty" [class.simple]="isSimple">
+<div id="timeline-albe" *ngIf="lstGroup && lstGroup.length > 0; else msgEmpty" [ngClass]="theme">
   <!-- A exibição do menu depende da definição de visibilidade do agrupador. -->
   <nav *ngIf="showGroup && showMenu">
     <a *ngFor="let group of lstGroup; let i = index;" [attr.href]="('#Y'+ group.Key)">{{group.Key}}</a>
@@ -8,7 +8,7 @@
     <section>
       <header *ngIf="showGroup" [attr.id]="('Y'+ group.Key)" class="group">{{group.Key}}</header>
       <article *ngFor="let element of group.Elements; index as i2; even as isEven; odd as isOdd;" [class.even]="isEven"
-        [class.odd]="isOdd" [class.inverted]="((i1 + i2) % 2 === 1) || isSimple">
+        [class.odd]="isOdd" [class.inverted]="((i1 + i2) % 2 === 1)">
         <span>{{element.datetime | date: formatDate}}</span>
         <header *ngIf="element.header">
           {{element.header}}

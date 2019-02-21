@@ -1,48 +1,56 @@
-<h1>Angular Timeline</h1>
+<div class="centro">
+  <h1>Angular Timeline</h1>
 
-<pre>{{data | json}}</pre>
+  <form [formGroup]="formulario">
+    <fieldset>
+      <legend>Show Navigation</legend>
+      <label>
+        <input type="radio" [value]="true" formControlName="showMenu" [checked]="true">
+        <span>YES</span>
+      </label>
+      <label>
+        <input type="radio" [value]="false" formControlName="showMenu">
+        <span>NO</span>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Show Group</legend>
+      <label>
+        <input type="radio" [value]="true" formControlName="showGroup" [checked]="true">
+        <span>YES</span>
+      </label>
+      <label>
+        <input type="radio" [value]="false" formControlName="showGroup">
+        <span>NO</span>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Sort Descedent</legend>
+      <label>
+        <input type="radio" [value]="true" formControlName="sortDesc" [checked]="true">
+        <span>YES</span>
+      </label>
+      <label>
+        <input type="radio" [value]="false" formControlName="sortDesc">
+        <span>NO</span>
+      </label>
+    </fieldset>
+    <fieldset>
+      <legend>Date Format</legend>
+      <select formControlName="formatDate">
+        <option [value]="item" *ngFor="let item of dateFormats">{{item}}</option>
+      </select>
+    </fieldset>
+    <fieldset>
+      <legend>Theme</legend>
+      <select formControlName="theme">
+        <option [value]="item" *ngFor="let item of themes">{{item}}</option>
+      </select>
+    </fieldset>
+    <div style="clear: both;"></div>
+  </form>
 
-<form [formGroup]="formulario">
-  <fieldset>
-    <legend>Show Navigation</legend>
-    <label>
-      <input type="radio" [value]="true" formControlName="showMenu" [checked]="true">
-      <span>YES</span>
-    </label>
-    <label>
-      <input type="radio" [value]="false" formControlName="showMenu">
-      <span>NO</span>
-    </label>
-  </fieldset>
-  <fieldset>
-    <legend>Show Group</legend>
-    <label>
-      <input type="radio" [value]="true" formControlName="showGroup" [checked]="true">
-      <span>YES</span>
-    </label>
-    <label>
-      <input type="radio" [value]="false" formControlName="showGroup">
-      <span>NO</span>
-    </label>
-  </fieldset>
-  <fieldset>
-    <legend>Sort Descedent</legend>
-    <label>
-      <input type="radio" [value]="true" formControlName="sortDesc" [checked]="true">
-      <span>YES</span>
-    </label>
-    <label>
-      <input type="radio" [value]="false" formControlName="sortDesc">
-      <span>NO</span>
-    </label>
-  </fieldset>
-  <span>Date Format</span>
-  <select formControlName="formatDate">
-    <option [value]="item" *ngFor="let item of dateFormats">{{item}}</option>
-  </select>
-</form>
+  <ngx-timeline [itens]="data" [formatDate]="formulario.value.formatDate" [sortDesc]="formulario.value.sortDesc"
+    [showMenu]="formulario.value.showMenu" [showGroup]="formulario.value.showGroup" [theme]="formulario.value.theme"></ngx-timeline>
 
-<pre>{{formulario.value | json}}</pre>
-
-<ngx-timeline [itens]="data" [formatDate]="formulario.value.formatDate" [sortDesc]="formulario.value.sortDesc"
-  [showMenu]="formulario.value.showMenu" [showGroup]="formulario.value.showGroup"></ngx-timeline>
+</div>
