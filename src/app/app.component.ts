@@ -44,12 +44,13 @@ export class AppComponent implements OnInit {
         }]
       },
       {
+        header: 'Sample of header',
         datetime: new Date('2015-03-29 23:59:59'),
         body: [{
           tag: 'p',
-          content: '3 - Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui. See <a href=\"https://github.com/Albejr/jquery-albe-timeline\" target=\"_blank\">more details</a>'
+          content: '3 - Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui.'
         }],
-        footer: 'test of footer'
+        footer: 'Sample of footer. See <a href=\"https://github.com/Albejr/jquery-albe-timeline\" target=\"_blank\">more details</a>'
       },
       {
         datetime: new Date('2015-03-29 13:00:15'),
@@ -61,7 +62,7 @@ export class AppComponent implements OnInit {
       {
         datetime: new Date('2019-01-22 15:38:00'),
         body: [{
-          tag: '',
+          tag: 'p',
           content: 'Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui.'
         }]
       }

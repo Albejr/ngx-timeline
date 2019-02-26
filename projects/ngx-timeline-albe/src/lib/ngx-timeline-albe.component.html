@@ -10,8 +10,7 @@
       <article *ngFor="let element of group.Elements; index as i2; even as isEven; odd as isOdd;" [class.even]="isEven"
         [class.odd]="isOdd" [class.inverted]="((i1 + i2) % 2 === 1)">
         <span>{{element.datetime | date: formatDate}}</span>
-        <header *ngIf="element.header">
-          {{element.header}}
+        <header *ngIf="element.header" [innerHTML]="element.header">
         </header>
         <div class="badge">
           <i *ngIf="element.icon" class="material-icons">{{element.icon}}</i>
@@ -22,8 +21,7 @@
             </div>
           </ng-container>
         </div>
-        <footer *ngIf="element.footer">
-          <p>{{element.footer}}</p>
+        <footer *ngIf="element.footer" [innerHTML]="element.footer">
         </footer>
       </article>
     </section>
