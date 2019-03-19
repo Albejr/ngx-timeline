@@ -6,7 +6,7 @@
 - Styles for the template are easily customizable.
 - Simplifies the aspects of internationalization, displaying dates and alternatives texts in a local format.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.2
+This project use angular version 7.2.9
 
 ## Installation
 ```html

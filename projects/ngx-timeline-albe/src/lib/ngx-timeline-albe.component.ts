@@ -22,6 +22,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
 
   emptyContent: string;
   lstGroup: Array<any>;
+  isInverted: boolean = true;
 
   //List of itens
   @Input()
@@ -53,11 +54,9 @@ export class NgxTimelineAlbeComponent implements OnInit {
   }
 
   ngOnInit() {
-
   }
 
   ngOnChanges() {
-
     // Se for passado 'string', convert para 'object'.
     if (typeof (this.itens) == 'string') {
       this.itens = JSON.parse(this.itens);
@@ -109,4 +108,8 @@ export class NgxTimelineAlbeComponent implements OnInit {
     return agrupado;
   }
 
+  trackByFn() {
+    this.isInverted = !this.isInverted;
+    return this.isInverted;
+  }
 }

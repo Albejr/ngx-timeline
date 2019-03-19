@@ -5,7 +5,7 @@
     <fieldset>
       <legend>Show Navigation</legend>
       <label>
-        <input type="radio" [value]="true" formControlName="showMenu" [checked]="true">
+        <input type="radio" [value]="true" formControlName="showMenu">
         <span>YES</span>
       </label>
       <label>
@@ -16,7 +16,7 @@
     <fieldset>
       <legend>Show Group</legend>
       <label>
-        <input type="radio" [value]="true" formControlName="showGroup" [checked]="true">
+        <input type="radio" [value]="true" formControlName="showGroup">
         <span>YES</span>
       </label>
       <label>
@@ -27,7 +27,7 @@
     <fieldset>
       <legend>Sort Descedent</legend>
       <label>
-        <input type="radio" [value]="true" formControlName="sortDesc" [checked]="true">
+        <input type="radio" [value]="true" formControlName="sortDesc">
         <span>YES</span>
       </label>
       <label>
@@ -50,7 +50,9 @@
     <div style="clear: both;"></div>
   </form>
 
-  <ngx-timeline [itens]="data" [formatDate]="formulario.value.formatDate" [sortDesc]="formulario.value.sortDesc"
-    [showMenu]="formulario.value.showMenu" [showGroup]="formulario.value.showGroup" [theme]="formulario.value.theme"></ngx-timeline>
+  <div [class.box]="formulario.value.theme == 'morning'">
+    <ngx-timeline [itens]="data" [formatDate]="formulario.value.formatDate" [sortDesc]="formulario.value.sortDesc"
+      [showMenu]="formulario.value.showMenu" [showGroup]="formulario.value.showGroup" [theme]="formulario.value.theme"></ngx-timeline>
+  </div>
 
 </div>

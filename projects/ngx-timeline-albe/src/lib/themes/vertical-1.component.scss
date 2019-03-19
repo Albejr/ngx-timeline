@@ -1,0 +1,224 @@
+@import '../scss/variables.scss';
+
+#timeline-albe.vertical-1 {
+  color: $color-black;
+  position: relative;
+
+  &::before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: 2px;
+    background-color: $color-orange;
+    left: 50%;
+    height: 100%;
+    margin-left: -1.5px;
+  }
+
+  nav {
+    height: 50px;
+    display: table;
+    margin: 0 auto;
+
+    a {
+      display: inline;
+
+      position: relative;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+
+      text-decoration: none;
+      font-size: 16px;
+      padding: 10px;
+      padding-top: 20px;
+      color: $color-white;
+      font-weight: bold;
+      border-bottom: 5px solid transparent;
+
+      &:hover {
+        color: $color-orange;
+        border-bottom: 5px solid $color-orange;
+        font-weight: normal;
+      }
+    }
+  }
+
+  section {
+    position: relative;
+    display: table;
+    content: " ";
+    width: 100%;
+
+    header[class*="group"] {
+      width: 65px;
+      font-size: 1.3em;
+      margin: 35px auto;
+      padding: 5px;
+      border-radius: 0px;
+      background: $color-orange;
+      color: $color-white;
+      display: block;
+      text-align: center;
+      cursor: none;
+      font-weight: bold;
+      -moz-box-shadow: 0 0 0 2px $color-orange, 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15);
+      -webkit-box-shadow: 0 0 0 2px $color-orange, 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 0 0 2px $color-orange, 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15);
+    }
+
+    .item {
+      width: 100%;
+      margin-bottom: 20px;
+
+      &::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      article {
+        position: relative;
+        width: 45%;
+        background: $color-white;
+        border: none;
+        -webkit-border-radius: 0px;
+        -moz-border-radius: 0px;
+        border-radius: 0px;
+        -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.15);
+        text-align: right;
+
+        &::after {
+          content: '';
+          position: absolute;
+          border-style: solid;
+          width: 0;
+          height: 0;
+          top: 30px;
+          right: -15px;
+          border-width: 10px 0 10px 15px;
+          border-color: transparent transparent transparent $color-white;
+        }
+
+        &.inverted {
+          float: right;
+          text-align: left;
+
+          &::after {
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent $color-white transparent transparent;
+
+          }
+
+          .body {
+            img {
+              float: right;
+            }
+          }
+        }
+
+        header {
+          color: $color-white;
+          padding: 8px;
+          margin: 0;
+          font-size: 1.2em;
+          background-color: $color-orange;
+          overflow: hidden;
+          text-align: center;
+          -webkit-border-radius: 0px;
+          -moz-border-radius: 0px;
+          border-radius: 0px;
+          font-size: 1.2em;
+        }
+
+        footer {
+          padding: 15px;
+          background-color: $color-white;
+        }
+
+        .body {
+          padding: 20px 10px;
+
+          img {
+            float: left;
+            margin: 0 15px 15px 0;
+          }
+        }
+      }
+
+      .badge {
+        display: table;
+        text-align: center;
+        cursor: none;
+        font-weight: bold;
+        -moz-box-shadow: 0 0 0 2px $color-orange, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15);
+        -webkit-box-shadow: 0 0 0 2px $color-orange, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 0 0 2px $color-orange, inset 0 2px 0 rgba(0, 0, 0, 0.1), 0 3px 0 2px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        left: 50%;
+        margin: 25px 0 0 -15px;
+        border-radius: 50%;
+        font-size: 0.75em;
+        width: 30px;
+        height: 30px;
+        background: $color-white;
+        word-break: break-word;
+        word-spacing: 30000px; 
+        
+        &.last {
+          background-color: $color-orange;
+          width: 20px;
+          height: 20px;
+          margin: 0 0 0 -12px;
+        }
+
+        span {
+          display: table-cell;
+          vertical-align: middle;
+          color: $color-orange;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #timeline-albe.vertical-1 {
+
+    &::before {
+      left: 50px;
+    }
+
+    section {
+
+      header[class*="group"] {
+        margin: 35px 12px;
+      }
+
+      .item {
+
+        .badge {
+          left: 50px;
+        }
+
+        article {
+          max-width: 100%;
+          width: auto;
+          margin-left: 90px;
+          text-align: left;
+
+          &::after {
+            content: '';
+            left: -15px;
+            border-width: 10px 15px 10px 0;
+            border-color: transparent $color-white transparent transparent;
+          }
+        }
+      }
+    }
+  }
+}
