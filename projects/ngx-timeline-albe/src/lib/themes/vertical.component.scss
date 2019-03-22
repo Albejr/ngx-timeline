@@ -1,6 +1,6 @@
 @import '../scss/variables.scss';
 
-#timeline-albe.vertical-1 {
+#timeline-albe.vertical {
   color: $color-black;
   position: relative;
 
@@ -8,7 +8,7 @@
     top: 0;
     bottom: 0;
     position: absolute;
-    content: " ";
+    content: ' ';
     width: 2px;
     background-color: $color-orange;
     left: 50%;
@@ -35,11 +35,10 @@
       padding-top: 20px;
       color: $color-white;
       font-weight: bold;
-      border-bottom: 5px solid transparent;
 
       &:hover {
         color: $color-orange;
-        border-bottom: 5px solid $color-orange;
+        border-bottom: 3px solid $color-orange;
         font-weight: normal;
       }
     }
@@ -48,7 +47,6 @@
   section {
     position: relative;
     display: table;
-    content: " ";
     width: 100%;
 
     header[class*="group"] {
@@ -132,7 +130,6 @@
           -webkit-border-radius: 0px;
           -moz-border-radius: 0px;
           border-radius: 0px;
-          font-size: 1.2em;
         }
 
         footer {
@@ -187,7 +184,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  #timeline-albe.vertical-1 {
+  #timeline-albe.vertical {
 
     &::before {
       left: 50px;

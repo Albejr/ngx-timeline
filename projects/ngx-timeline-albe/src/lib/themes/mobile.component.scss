@@ -1,6 +1,6 @@
 @import '../scss/variables.scss';
 
-#timeline-albe.morning {
+#timeline-albe.mobile {
   color: $color-white;
 
   nav {
@@ -64,6 +64,7 @@
 
         .body {
           text-align: justify;
+          line-height: 20px;
         }
       }
 
@@ -83,8 +84,6 @@
         &.last {
           display: none;
         }
-
-        span {}
       }
     }
   }

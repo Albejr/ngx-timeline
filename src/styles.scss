@@ -6,12 +6,12 @@ body {
   margin: 0;
 
 
-  background: linear-gradient(230deg, #a24bcf, #4b79cf, #4bc5cf);
+  background: linear-gradient(230deg, #A24BCF, #4B79CF, #4BC5CF);
   background-size: 300% 300%;
-  -webkit-animation: MoveBG 60s ease infinite;
-  -moz-animation: MoveBG 60s ease infinite;
-  -o-animation: MoveBG 60s ease infinite;
-  animation: MoveBG 60s ease infinite;
+  -webkit-animation: MoveBG 30s ease infinite;
+  -moz-animation: MoveBG 30s ease infinite;
+  -o-animation: MoveBG 30s ease infinite;
+  animation: MoveBG 30s ease infinite;
 }
 
 @-webkit-keyframes MoveBG {

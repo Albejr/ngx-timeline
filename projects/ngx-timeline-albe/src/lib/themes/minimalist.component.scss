@@ -1,0 +1,92 @@
+  @import '../scss/variables.scss';
+
+  #timeline-albe.minimalist {
+    color: $color-black;
+    font-size: 12px;
+    text-align: justify;
+    margin: 5px 0px;
+    padding: 0px;
+    position: relative;
+    width: 320px;
+    margin: 50px;
+
+    &::before {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: '';
+      width: 1px;
+      background-color: $color-green;
+    }
+
+    nav {
+      display: table;
+      text-align: right;
+      width: 95%;
+  
+      a {
+        display: inline;
+  
+        position: relative;
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+  
+        text-decoration: none;
+        padding: 10px;
+        padding-top: 20px;
+        color: $color-white;
+        font-weight: bold;
+  
+        &:hover {
+          color: $color-green;
+          border-bottom: 1px solid $color-green;
+          font-weight: normal;
+        }
+      }
+    }
+
+    section {
+      header[class*="group"] {
+        display: none;
+      }
+
+      .item {
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        position: relative;
+        margin-bottom: 15px;
+
+        article {
+          text-align: left;
+          padding: 1px 15px;
+        }
+
+        .badge {
+          content: '';
+          width: 13px;
+          height: 13px;
+          background-color: $color-white;
+          border-radius: 50%;
+          border: 1px solid $color-green;
+          position: absolute;
+          left: -7px;
+          top: 0px;
+
+          &.last {
+            background-color: $color-green;
+            position: relative;
+          }
+
+          span {
+            display: none;
+          }
+        }
+      }
+    }
+  }

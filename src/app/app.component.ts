@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   formulario: FormGroup;
   dateFormats: Array<string> = ['dd MMMM', 'dd/MM/yyyy HH:mm:ss', 'MM/dd/yyyy', 'yyyy/MM/dd'];
-  themes: Array<string> = ['basic', 'horizontal', 'minimalist', 'morning', 'vertical-1', 'vertical-2'];
+  themes: Array<string> = ['basic', 'horizontal', 'minimalist', 'mobile', 'vertical'];
   data: Array<TimelineItem>;
 
   constructor(fb: FormBuilder) {
@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
       showGroup: [true],
       sortDesc: [false],
       formatDate: ['dd/MM/yyyy HH:mm:ss'],
-      theme: 'morning'
+      theme: 'vertical'
     });
 
   }
@@ -30,7 +30,7 @@ export class AppComponent implements OnInit {
 
     this.data = [
       {
-        datetime: new Date('2015-03-29 09:31:45'),
+        datetime: new Date('2017-03-29 09:31:45'),
         body: [
           {
             tag: 'div',
@@ -46,7 +46,7 @@ export class AppComponent implements OnInit {
           }]
       },
       {
-        datetime: new Date('2015-04-15'),
+        datetime: new Date('2017-04-15'),
         body: [{
           tag: 'p',
           content: 'Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui.'
@@ -54,7 +54,7 @@ export class AppComponent implements OnInit {
       },
       {
         header: 'Sample of header',
-        datetime: new Date('2015-03-29 23:59:59'),
+        datetime: new Date('2017-03-29 23:59:59'),
         body: [
           {
             tag: 'h1',
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
         footer: 'Sample of footer. See <a href=\"https://github.com/Albejr/jquery-albe-timeline\" target=\"_blank\">more details</a>'
       },
       {
-        datetime: new Date('2015-03-29 13:00:15'),
+        datetime: new Date('2017-03-29 13:00:15'),
         body: [
           {
             tag: 'h1',
