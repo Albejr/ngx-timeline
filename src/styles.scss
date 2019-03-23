@@ -5,13 +5,9 @@ body {
   color: #FFF;
   margin: 0;
 
-
-  background: linear-gradient(230deg, #A24BCF, #4B79CF, #4BC5CF);
-  background-size: 300% 300%;
-  -webkit-animation: MoveBG 30s ease infinite;
-  -moz-animation: MoveBG 30s ease infinite;
-  -o-animation: MoveBG 30s ease infinite;
-  animation: MoveBG 30s ease infinite;
+  background: #C33764;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1D2671), to(#C33764)) fixed;
+  background: gradient(linear, left top, left bottom, from(#1D2671), to(#C33764)) fixed;
 }
 
 @-webkit-keyframes MoveBG {
