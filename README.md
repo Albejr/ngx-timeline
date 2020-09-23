@@ -1,7 +1,5 @@
 # Albe Timeline <sup>1.2.1</sup>
 
-![coming-soon](https://user-images.githubusercontent.com/24717256/48868632-62fcb600-edc1-11e8-8d84-d66289a517f4.png)
-
 Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data.
 
 The data will be automatically grouped by year and the events will be sorted by date.
@@ -147,6 +145,6 @@ Follow these instructions to run the demo:
 - [x] Multiplas linguagens.
 - [x] Multiplos estilos.
 - [ ] Documentar customização do CSS.
-- [ ] Documentar 'json' ou 'object'.
+- [x] Documentar 'json' ou 'object'.
 
 >Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline
