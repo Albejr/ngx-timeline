@@ -66,8 +66,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
 
   ngOnChanges() {
     // Se for passado 'string', convert para 'object'.
-    (typeof this.itens === 'string' || this.itens instanceof String)
-    if (typeof (this.itens) == 'string') {
+    if (typeof this.itens === 'string') {
       this.itens = JSON.parse(this.itens);
     }
 
@@ -86,7 +85,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
   }
 
   getAnchorID(d: any): string {
-    return 'Y' + new Date(d).getFullYear();
+    return 'Y' + new Date(d).getUTCFullYear();
   }
 
   groupBy(colecao: Array<TimelineItem>) {
@@ -94,7 +93,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
 
     colecao.forEach(i => {
 
-      const d1 = new Date(i.datetime).getFullYear();
+      const d1 = new Date(i.datetime).getUTCFullYear();
       let foiAgrupado = false;
 
       agrupado.forEach(j => {

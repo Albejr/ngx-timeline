@@ -168,7 +168,9 @@
           background-color: $color-orange;
           width: 20px;
           height: 20px;
-          margin: 0 0 0 -12px;
+          margin: 0px 0px -20px -10px;
+          position: relative;
+          clear: both;
         }
 
         span {

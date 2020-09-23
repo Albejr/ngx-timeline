@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   dateFormats: Array<string> = ['dd MMMM', 'dd/MM/yyyy HH:mm:ss', 'MM/dd/yyyy', 'yyyy/MM/dd'];
   themes: Array<string> = ['basic', 'horizontal', 'minimalist', 'mobile', 'vertical'];
   data: Array<TimelineItem>;
-  jsonData: any;
+  jsonData: string;
 
   constructor(fb: FormBuilder) {
 
@@ -65,10 +65,10 @@ export class AppComponent implements OnInit {
             tag: 'p',
             content: 'Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui.'
           }],
-        footer: 'Sample of footer. See <a href=\"https://github.com/Albejr/jquery-albe-timeline\" target=\"_blank\">more details</a>'
+        footer: 'Sample of footer. See <a href=\"https://github.com/Albejr/ngx-timeline\" target=\"_blank\">more details</a>'
       },
       {
-        datetime: new Date('2017-03-29 13:00:15'),
+        datetime: new Date('2020-01-01'),
         body: [
           {
             tag: 'h1',
@@ -121,9 +121,9 @@ export class AppComponent implements OnInit {
           "content": "Lorem ipsum dolor sit amet, nisl lorem, wisi egestas orci tempus class massa, suscipit eu elit urna in urna, gravida wisi aenean eros massa, cursus quisque leo quisque dui."
         }
       ],
-      "footer": "Sample of footer. See <a href='https://github.com/Albejr/jquery-albe-timeline' target='_blank'>more details</a>"
+      "footer": "Sample of footer. See <a href='https://github.com/Albejr/ngx-timeline' target='_blank'>more details</a>"
     }, {
-      "datetime": "2017-03-29 13:00:15",
+      "datetime": "2020-01-01",
       "body": [{
           "tag": "h1",
           "content": "Basic content"
