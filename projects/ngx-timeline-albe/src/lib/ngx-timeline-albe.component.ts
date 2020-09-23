@@ -1,5 +1,13 @@
-import { Component, OnInit, Input, ViewEncapsulation, Inject, LOCALE_ID } from '@angular/core';
-import { ItemBody, TimelineItem } from './TimelineItem';
+import {
+  Component,
+  OnInit,
+  Input,
+  ViewEncapsulation,
+  Inject,
+  LOCALE_ID
+} from '@angular/core';
+
+import { ItemBody, TimelineItem } from './timeline-item';
 import { I18n } from './i18n';
 
 const DEFAULT_OPTIONS: any = {
@@ -16,13 +24,13 @@ const DEFAULT_OPTIONS: any = {
   selector: 'ngx-timeline',
   templateUrl: './ngx-timeline-albe.component.html',
   styleUrls: ['./ngx-timeline-albe.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  //changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NgxTimelineAlbeComponent implements OnInit {
 
   emptyContent: string;
   lstGroup: Array<any>;
-  isInverted: boolean = true;
 
   //List of itens
   @Input()
@@ -58,6 +66,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
 
   ngOnChanges() {
     // Se for passado 'string', convert para 'object'.
+    (typeof this.itens === 'string' || this.itens instanceof String)
     if (typeof (this.itens) == 'string') {
       this.itens = JSON.parse(this.itens);
     }
@@ -106,10 +115,5 @@ export class NgxTimelineAlbeComponent implements OnInit {
     });
 
     return agrupado;
-  }
-
-  trackByFn() {
-    this.isInverted = !this.isInverted;
-    return this.isInverted;
   }
 }

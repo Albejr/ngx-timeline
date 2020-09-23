@@ -41,11 +41,13 @@ Follow these instructions to run the demo:
 
 
 ## To do
-- [ ] Se for passado 'string', converter para 'object'.
+- [x] Se for passado 'json' (string), converter para 'object'.
 - [x] Exibe mensagem padão.
 - [ ] Inserir animação.
 - [x] Ordenar itens pela data.
 - [x] Multiplas linguagens.
-- [ ] Multiplos estilos.
+- [x] Multiplos estilos.
+- [ ] Documentar customização do CSS.
+- [ ] Documentar 'json' ou 'object'.
 
 >Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline

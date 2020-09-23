@@ -51,7 +51,7 @@
   </form>
 
   <div [class.box]="formulario.value.theme == 'minimalist' || formulario.value.theme == 'mobile'">
-    <ngx-timeline [itens]="data" [formatDate]="formulario.value.formatDate" [sortDesc]="formulario.value.sortDesc"
+    <ngx-timeline [itens]="jsonData" [formatDate]="formulario.value.formatDate" [sortDesc]="formulario.value.sortDesc"
       [showMenu]="formulario.value.showMenu" [showGroup]="formulario.value.showGroup" [theme]="formulario.value.theme"></ngx-timeline>
   </div>
 

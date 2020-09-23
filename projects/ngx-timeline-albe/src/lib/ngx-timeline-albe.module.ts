@@ -3,12 +3,14 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { NgxTimelineAlbeComponent } from './ngx-timeline-albe.component';
-import { ReplaceTagDirective } from './replace-tag.directive';
+import { ReplaceTagDirective } from './tag-replace.directive';
+import { SafeHtmlPipe } from './safe-html.pipe';
 
 @NgModule({
   declarations: [
     NgxTimelineAlbeComponent,
-    ReplaceTagDirective
+    ReplaceTagDirective,
+    SafeHtmlPipe
   ],
   imports: [
     CommonModule,

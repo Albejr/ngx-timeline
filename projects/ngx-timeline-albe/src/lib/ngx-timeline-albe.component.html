@@ -4,25 +4,26 @@
     <a *ngFor="let group of lstGroup;" [attr.href]="('#Y'+ group.Key)">{{group.Key}}</a>
   </nav>
 
-  <ng-container *ngFor="let group of lstGroup; index as i1; last as l1">
+  <ng-container *ngFor="let group of lstGroup; index as i1; last as l1;">
     <section>
       <header *ngIf="showGroup" [attr.id]="('Y'+ group.Key)" class="group">{{group.Key}}</header>
-      <div *ngFor="let element of group.Elements; index as i2; last as l2" class="item">
+      <div *ngFor="let element of group.Elements; index as i2; last as l2; let par2 = even; let impar2 = odd;"
+        class="item">
         <div class="badge">
           <i *ngIf="element.icon" class="material-icons">{{element.icon}}</i>
           <span *ngIf="!element.icon">{{element.datetime | date: 'dd MMM'}}</span>
         </div>
-        <article [class.inverted]="trackByFn()">
-          <header *ngIf="element.header" [innerHTML]="element.header">
+        <article [class.inverted]="impar2">
+          <header *ngIf="element.header" [innerHTML]="element.header | safeHtml">
           </header>
           <div class="body">
             <span>{{element.datetime | date: formatDate}}</span>
             <ng-container *ngFor="let itemBody of element.body;">
-              <div *replaceTag="itemBody.tag" [innerHTML]="itemBody.content">
+              <div *replaceTag="itemBody.tag" [innerHTML]="itemBody.content | safeHtml">
               </div>
             </ng-container>
           </div>
-          <footer *ngIf="element.footer" [innerHTML]="element.footer">
+          <footer *ngIf="element.footer" [innerHTML]="element.footer | safeHtml">
           </footer>
         </article>
         <div *ngIf="l1 && l2" class="badge last">

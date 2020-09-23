@@ -24,18 +24,18 @@
       display: table;
       text-align: right;
       width: 95%;
-  
+
       a {
-        display: inline;  
+        display: inline;
         position: relative;
         margin: 0px;
-        padding: 0px;  
+        padding: 0px;
         text-decoration: none;
         padding: 10px;
         padding-top: 20px;
         color: $color-white;
         font-weight: bold;
-  
+
         &:hover {
           color: $color-green;
           border-bottom: 1px solid $color-green;
@@ -62,6 +62,10 @@
         article {
           text-align: left;
           padding: 1px 15px;
+
+          .body {
+            display: inline-block;
+          }
         }
 
         .badge {

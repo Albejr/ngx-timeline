@@ -1,3 +1,7 @@
+/*
+* font: https://stackoverflow.com/questions/42048836/change-a-tag-dynamically-angular-2
+*/
+
 import { Directive, Input, TemplateRef, ViewContainerRef, AfterViewChecked } from '@angular/core';
 
 @Directive({
@@ -18,14 +22,13 @@ export class ReplaceTagDirective implements AfterViewChecked {
     this._tag = (!t) ? 'span' : t;
     this._needUpdate = true;
 
-    this.viewContainer.clear();
-
     let template = this.templateRef.elementRef.nativeElement.nextElementSibling;
 
     if (template) {
       this.templateRef.elementRef.nativeElement.parentNode.removeChild(template);
     }
 
+    this.viewContainer.clear();
     this.viewContainer.createEmbeddedView(this.templateRef);
   }
 
@@ -37,7 +40,9 @@ export class ReplaceTagDirective implements AfterViewChecked {
   }
 
   private _updateTemplate() {
-    let template = this.templateRef.elementRef.nativeElement.nextElementSibling;
+    //Nullish Coalescing
+    let template = this.templateRef.elementRef.nativeElement.nextElementSibling
+      ?? this.templateRef.elementRef.nativeElement.previousElementSibling;
 
     if (template) {
       let r = document.createElement(this._tag);
