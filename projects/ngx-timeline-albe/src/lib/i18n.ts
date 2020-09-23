@@ -1,14 +1,18 @@
-export const I18n = {
-    "en-US": {
+export const I18n = [
+    {
+        lang: "en-US",
         messageForEmptyContent: "No information to display."
     },
-    "es-ES": {
+    {
+        lang: "es-ES",
         messageForEmptyContent: "No hay información para mostrar."
     },
-    "fr-FR": {
+    {
+        lang: "fr-FR",
         messageForEmptyContent: "Aucune information à afficher."
     },
-    "pt-BR": {
+    {
+        lang: "pt-BR",
         messageForEmptyContent: 'Sem informações a serem exibidas.',
     }
-};
+];

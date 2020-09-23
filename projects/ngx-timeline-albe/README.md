@@ -17,6 +17,10 @@ The component is open source and released for free commercial use at no cost. Do
 ```html
 $ npm install ngx-timeline-albe
 ```
+or
+```html
+$ bit import albejr.ngx/ngx-timeline-albe
+```
 
 ## How to use
 ### Import the module

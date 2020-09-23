@@ -8,7 +8,7 @@ import { Directive, Input, TemplateRef, ViewContainerRef, AfterViewChecked } fro
   selector: '[replaceTag]'
 })
 export class ReplaceTagDirective implements AfterViewChecked {
-  private _tag: string;
+  private _tag: string = '';
   private _needUpdate: boolean = false;
 
   constructor(

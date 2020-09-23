@@ -6,6 +6,12 @@ import { NgxTimelineAlbeComponent } from './ngx-timeline-albe.component';
 import { ReplaceTagDirective } from './tag-replace.directive';
 import { SafeHtmlPipe } from './safe-html.pipe';
 
+export const routerModule = RouterModule.forRoot([], {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 50] // [x, y]
+});
+
 @NgModule({
   declarations: [
     NgxTimelineAlbeComponent,
@@ -14,11 +20,7 @@ import { SafeHtmlPipe } from './safe-html.pipe';
   ],
   imports: [
     CommonModule,
-    RouterModule.forRoot([], {
-      scrollPositionRestoration: 'enabled',
-      anchorScrolling: 'enabled',
-      scrollOffset: [0, 50] // [x, y]
-    })
+    routerModule
   ],
   exports: [NgxTimelineAlbeComponent]
 })

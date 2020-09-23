@@ -38,5 +38,12 @@
     "tslib": "^2.0.1",
     "tslint": "~5.20.1",
     "typescript": "~3.9.7"
+  },
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/compilers/angular@9.0.23"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }

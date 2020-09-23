@@ -29,12 +29,12 @@ const DEFAULT_OPTIONS: any = {
 })
 export class NgxTimelineAlbeComponent implements OnInit {
 
-  emptyContent: string;
-  lstGroup: Array<any>;
+  emptyContent: string = '';
+  lstGroup!: Array<any>;
 
   //List of itens
   @Input()
-  itens: Array<TimelineItem> | String;
+  itens: Array<TimelineItem> | String = [];
   //Effect of presentation
   //'fadeInUp', 'bounceIn', etc
   @Input()
@@ -81,7 +81,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
     this.lstGroup = this.groupBy(this.itens);
 
     //Specifies the display language of texts (i18n)
-    this.emptyContent = I18n[this.localeID] && I18n[this.localeID].messageForEmptyContent || I18n[DEFAULT_OPTIONS.language].messageForEmptyContent;
+    this.emptyContent =  I18n.find(element => element.lang == this.localeID || element.lang == DEFAULT_OPTIONS.language)?.messageForEmptyContent ?? '';
   }
 
   getAnchorID(d: any): string {
@@ -89,7 +89,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
   }
 
   groupBy(colecao: Array<TimelineItem>) {
-    var agrupado = [];
+    var agrupado: { Key: number; Elements: TimelineItem[]; }[] = [];
 
     colecao.forEach(i => {
 
