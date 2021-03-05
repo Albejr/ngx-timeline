@@ -1,4 +1,4 @@
-# Albe Timeline <sup>1.2.3</sup>
+# Albe Timeline <sup>1.2.4</sup>
 
 Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data.
 
