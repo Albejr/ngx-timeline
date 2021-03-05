@@ -1,4 +1,4 @@
-# Albe Timeline <sup>1.2.1</sup>
+# Albe Timeline <sup>1.2.3</sup>
 
 Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data.
 
@@ -8,7 +8,7 @@ The data will be automatically grouped by year and the events will be sorted by 
 - Styles for the template are easily customizable.
 - Simplifies the aspects of internationalization, displaying dates and alternatives texts in a local format.
 
-This project use angular version 10.1.2
+This project use angular version 11.2.4
 
 ## Use license
 The component is open source and released for free commercial use at no cost. Donations are welcome.
