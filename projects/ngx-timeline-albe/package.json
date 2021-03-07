@@ -1,6 +1,6 @@
 {
   "name": "ngx-timeline-albe",
-  "version": "1.2.4",
+  "version": "1.2.11",
   "description": "Component for rendering timelines from the your data.",
   "keywords": [
     "angular",
