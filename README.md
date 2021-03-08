@@ -35,20 +35,6 @@ export class AppModule {}
 <ngx-timeline [itens]="data"></ngx-timeline>
 ```
 
-* Instance with options:
-```html
-<ngx-timeline [itens]="data" 
-    [formatDate]="'dd MMMM'" 
-    [sortDesc]="true"
-    [showMenu]="true" 
-    [showGroup]="true" 
-    [theme]="'basic'">
-</ngx-timeline>
-
-<!-- FORMATS: 'dd MMMM', 'dd/MM/yyyy HH:mm:ss', 'MM/dd/yyyy', 'yyyy/MM/dd' -->
-<!-- THEMES: 'basic', 'horizontal', 'minimalist', 'mobile', 'vertical' -->
-```
-
 ### Component
 ```typescript
 import { TimelineItem } from 'ngx-timeline-albe';
@@ -96,6 +82,47 @@ ngOnInit() {
   }
 ```
 
+### Options
+
+| Name           |          | Type                               | Default   | Description                                                                                       |
+| -------------- | -------- | ---------------------------------- | --------- | ------------------------------------------------------------------------------------------------- |
+| [itens]        | required | `Array<TimelineItem>` or `String Json` | [ ]       | List of itens to be displayed.                                                                    |
+| [showGroup]    | optional | Boolean                            | true      | Sets the visibility of the annual grouper. |
+| [showMenu]     | optional | Boolean                            | true      | Sets the anchor menu visibility for annual groupings (depends on 'showGroup'). |
+| [sortDesc]     | optional | Boolean                            | true      | Defines ordering of items, true: Descendente, false: Ascendente. |
+| [formatDate]   | optional | String                             | 'dd MMMM' | Sets the date display format. |
+| [language]     | optional | String                             | 'pt-BR'   | Specifies manually the display language of texts (i18n), if the token LocaleID is not configured. |
+| [theme]        | optional | String                             | 'basic'   | Defines the style, 'horizontal', 'minimalist', 'mobile', 'vertical'. |
+
+#### TimelineItem Type
+
+| Name     |          | Type              | Description                |
+| -------- | -------- | ----------------- | -------------------------- |
+| datetime | required | Date              |                            |
+| icon     | optional | string            |                            |
+| header   | optional | string            |                            |
+| body     | required | `Array<ItemBody>` |                            |
+| footer   | optional | string            |                            |
+
+#### ItemBody Type
+
+| Name    |          | Type           | Description                |
+| ------- | -------- | -------------- | -------------------------- |
+| tag     | required | string         |                            |
+| content | required | string         |                            |
+| attr    | optional | `TagAttribute` |                            |
+
+#### TagAttribute Type
+
+| Name     |          | Type   | Description                |
+| -------- | -------- | ------ | -------------------------- |
+| href     | optional | string |                            |
+| target   | optional | string |                            |
+| title    | optional | string |                            |
+| src      | optional | string |                            |
+| width    | optional | string |                            |
+| cssclass | optional | string |                            |
+
 ## Html Structure
 We'll have a similar result:
 ```html
@@ -124,8 +151,22 @@ We'll have a similar result:
 <ngx-timeline>
 ```
 
+## Styling guide
+
+There are several classes that help you to create your custom styles
+`app.component.css`
+```css
+:host ::ng-deep #timeline-albe.minimalist {
+  color: inherit;
+  font-size: inherit;
+  width: inherit;
+  margin: 10px;
+}
+```
+
 ## Notes
 * The **datetime** element must meet the ISO 8601 standard in year-month-day format "yyyy-MM-dd" or "yyyy-MM-dd HH:mm:ss"
+* Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline
 
 ## Demo App
 Follow these instructions to run the demo:
@@ -135,16 +176,3 @@ Follow these instructions to run the demo:
 3. Run `ng b ngx-timeline-albe` to build in **dist** folder.
 4. Run `ng s` to serve the project from a live-updating server.
 5. Go to `localhost:4200` to see the demo site
-
-
-## To do
-- [x] Se for passado 'json' (string), converter para 'object'.
-- [x] Exibe mensagem padão.
-- [ ] Inserir animação.
-- [x] Ordenar itens pela data.
-- [x] Multiplas linguagens.
-- [x] Multiplos estilos.
-- [ ] Documentar customização do CSS.
-- [x] Documentar 'json' ou 'object'.
-
->Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline
