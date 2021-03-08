@@ -57,6 +57,9 @@ export class NgxTimelineAlbeComponent implements OnInit {
   //Defines the style
   @Input()
   theme: string = DEFAULT_OPTIONS.theme;
+  //Specifies the display language of texts (i18n), if LocaleID is not configured.
+  @Input()
+  language: string = DEFAULT_OPTIONS.language;
 
   constructor(@Inject(LOCALE_ID) protected localeID: string) {
   }
@@ -81,7 +84,7 @@ export class NgxTimelineAlbeComponent implements OnInit {
     this.lstGroup = this.groupBy(this.itens);
 
     //Specifies the display language of texts (i18n)
-    this.emptyContent =  I18n.find(element => element.lang == this.localeID || element.lang == DEFAULT_OPTIONS.language)?.messageForEmptyContent ?? '';
+    this.emptyContent =  I18n.find(element => element.lang == this.localeID || element.lang == this.language)?.messageForEmptyContent ?? '';
   }
 
   getAnchorID(d: any): string {
