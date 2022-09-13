@@ -1,8 +1,5 @@
-# Albe Timeline <sup>1.3.0</sup>
-
-Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data.
-
-The data will be automatically grouped by year and the events will be sorted by date.
+<h1 align="center"><i>Albe Timeline <sup>1.3.0</sup></i></h1>
+<p align="center"><i>Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data. The data will be automatically grouped by year and the events will be sorted by date.</i></p>
 
 - Content HTML highly manipulable.
 - Styles for the template are easily customizable.
