@@ -28,7 +28,8 @@
   },
   "angularCompilerOptions": {
     "strictInjectionParameters": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "compilationMode": "partial"
   },
   "exclude": [
     "src/test.ts",
