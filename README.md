@@ -5,7 +5,14 @@
 - Styles for the template are easily customizable.
 - Simplifies the aspects of internationalization, displaying dates and alternatives texts in a local format.
 
-This project use angular version 15.2.6
+Version history:
+| Library | Angular |
+| ------- | ------- |
+| Lastet | 15.2.6 |
+| 1.3.0 | 14.2.0 |
+| 1.2.11 | 11.2.4 |
+| 1.2.0 | 10.1.2 |
+| 1.1.0 | 8.0.0 |
 
 ## Use license
 The component is open source and released for free commercial use at no cost. Donations are welcome.
