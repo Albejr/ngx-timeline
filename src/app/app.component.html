@@ -37,17 +37,17 @@
     </fieldset>
     <fieldset>
       <legend>Date Format</legend>
-      <select formControlName="formatDate">
+      <select formControlName="formatDate" title="Select Date Format">
         <option [value]="item" *ngFor="let item of dateFormats">{{item}}</option>
       </select>
     </fieldset>
     <fieldset>
       <legend>Theme</legend>
-      <select formControlName="theme">
+      <select formControlName="theme" title="Select Theme">
         <option [value]="item" *ngFor="let item of themes">{{item}}</option>
       </select>
     </fieldset>
-    <div style="clear: both;"></div>
+    <div class="clear-both"></div>
   </form>
 
   <div [class.box]="formulario.value.theme == 'minimalist' || formulario.value.theme == 'mobile'">

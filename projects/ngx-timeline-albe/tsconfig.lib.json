@@ -1,9 +1,21 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    // Strict mode
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
     "outDir": "../../out-tsc/lib",
-    "target": "es2015",
-    "module": "es2020",
+    "target": "es2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
     "moduleResolution": "node",
     "declaration": true,
     "sourceMap": true,
@@ -12,19 +24,11 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "types": [],
-    "lib": [
-      "dom",
-      "es2018"
-    ]
+    "forceConsistentCasingInFileNames": true,
   },
   "angularCompilerOptions": {
-    "enableIvy": false,
-    "annotateForClosureCompiler": true,
-    "skipTemplateCodegen": true,
-    "strictMetadataEmit": true,
-    "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
-    "enableResourceInlining": true
+    "strictTemplates": true
   },
   "exclude": [
     "src/test.ts",

@@ -1,21 +1,29 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    // Strict mode
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
-    "module": "es2015",
+    "target": "es2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
     "moduleResolution": "node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
-    ],
-    "lib": [
-      "es2018",
-      "dom"
     ],
     "paths": {
       "ngx-timeline-albe": [
@@ -24,6 +32,7 @@
       "ngx-timeline-albe/*": [
         "dist/ngx-timeline-albe/*"
       ]
-    }
+    },
+    "forceConsistentCasingInFileNames": true,
   }
 }

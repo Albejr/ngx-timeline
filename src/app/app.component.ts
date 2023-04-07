@@ -12,8 +12,8 @@ export class AppComponent implements OnInit {
   formulario: FormGroup;
   dateFormats: Array<string> = ['dd MMMM', 'dd/MM/yyyy HH:mm:ss', 'MM/dd/yyyy', 'yyyy/MM/dd'];
   themes: Array<string> = ['basic', 'horizontal', 'minimalist', 'mobile', 'vertical'];
-  data: Array<TimelineItem>;
-  jsonData: string;
+  data: Array<TimelineItem> = [];
+  jsonData: string = '';
 
   constructor(fb: FormBuilder) {
 

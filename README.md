@@ -1,11 +1,11 @@
-<h1 align="center"><i>Albe Timeline <sup>1.3.0</sup></i></h1>
+<h1 align="center"><i>Albe Timeline <sup>1.4.0</sup></i></h1>
 <p align="center"><i>Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data. The data will be automatically grouped by year and the events will be sorted by date.</i></p>
 
 - Content HTML highly manipulable.
 - Styles for the template are easily customizable.
 - Simplifies the aspects of internationalization, displaying dates and alternatives texts in a local format.
 
-This project use angular version 14.2.0
+This project use angular version 15.2.6
 
 ## Use license
 The component is open source and released for free commercial use at no cost. Donations are welcome.
