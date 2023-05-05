@@ -49,9 +49,6 @@ export class AppModule {}
     [showGroup]="true" 
     [theme]="'basic'">
 </ngx-timeline>
-
-<!-- FORMATS: 'dd MMMM', 'dd/MM/yyyy HH:mm:ss', 'MM/dd/yyyy', 'yyyy/MM/dd' -->
-<!-- THEMES: 'basic', 'horizontal', 'minimalist', 'mobile', 'vertical' -->
 ```
 
 ### Component
@@ -109,9 +106,9 @@ ngOnInit() {
 | [showGroup]    | optional | Boolean                            | true      | Sets the visibility of the annual grouper. |
 | [showMenu]     | optional | Boolean                            | true      | Sets the anchor menu visibility for annual groupings (depends on 'showGroup'). |
 | [sortDesc]     | optional | Boolean                            | true      | Defines ordering of items, true: Descendente, false: Ascendente. |
-| [formatDate]   | optional | String                             | 'dd MMMM' | Sets the date display format. |
+| [formatDate]   | optional | String                             | 'dd MMMM' | Sets the date display format: <ul><li>'dd MMMM'</li><li>'dd/MM/yyyy HH:mm:ss'</li><li>'MM/dd/yyyy'</li><li>'yyyy/MM/dd'</li></ul> |
 | [language]     | optional | String                             | 'pt-BR'   | Specifies manually the display language of texts (i18n), if the token LocaleID is not configured. |
-| [theme]        | optional | String                             | 'basic'   | Defines the style, 'horizontal', 'minimalist', 'mobile', 'vertical'. |
+| [theme]        | optional | String                             | 'basic'   | Defines the style: <ul><li>'basic'</li><li>'horizontal'</li><li>'minimalist'</li><li>'mobile'</li><li>'vertical'</li></ul> |
 
 #### TimelineItem Type
 
