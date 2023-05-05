@@ -1,4 +1,4 @@
-<h1 align="center"><i>Albe Timeline <sup>1.4.1</sup></i></h1>
+<h1 align="center"><i>Albe Timeline <sup>1.5.0</sup></i></h1>
 <p align="center"><i>Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data. The data will be automatically grouped by year and the events will be sorted by date.</i></p>
 
 - Content HTML highly manipulable.
@@ -8,7 +8,8 @@
 Version history:
 | Library | Angular |
 | ------- | ------- |
-| Lastet | 15.2.6 |
+| Lastet | 16.0.0 |
+| 1.4.1 | 15.2.6 |
 | 1.3.0 | 14.2.0 |
 | 1.2.11 | 11.2.4 |
 | 1.2.0 | 10.1.2 |
@@ -37,6 +38,20 @@ export class AppModule {}
 ### Template
 ```html
 <ngx-timeline [itens]="data"></ngx-timeline>
+```
+
+* Instance with options:
+```html
+<ngx-timeline [itens]="data" 
+    [formatDate]="'dd MMMM'" 
+    [sortDesc]="true"
+    [showMenu]="true" 
+    [showGroup]="true" 
+    [theme]="'basic'">
+</ngx-timeline>
+
+<!-- FORMATS: 'dd MMMM', 'dd/MM/yyyy HH:mm:ss', 'MM/dd/yyyy', 'yyyy/MM/dd' -->
+<!-- THEMES: 'basic', 'horizontal', 'minimalist', 'mobile', 'vertical' -->
 ```
 
 ### Component
@@ -170,7 +185,6 @@ There are several classes that help you to create your custom styles
 
 ## Notes
 * The **datetime** element must meet the ISO 8601 standard in year-month-day format "yyyy-MM-dd" or "yyyy-MM-dd HH:mm:ss"
-* Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline
 
 ## Demo App
 Follow these instructions to run the demo:
@@ -180,3 +194,16 @@ Follow these instructions to run the demo:
 3. Run `ng b ngx-timeline-albe` to build in **dist** folder.
 4. Run `ng s` to serve the project from a live-updating server.
 5. Go to `localhost:4200` to see the demo site
+
+
+## To do
+- [x] If 'json' (string) is passed, convert to 'object'.
+- [x] Displays default message.
+- [ ] Insert animation.
+- [x] Sort items by date.
+- [x] Multiple languages.
+- [x] Multiple styles.
+- [ ] Document CSS customization.
+- [x] Document 'json' or 'object'.
+
+>Inspired on the plug-in: https://github.com/Albejr/jquery-albe-timeline

@@ -13,7 +13,7 @@
     "useUnknownInCatchVariables": true,
 
     "outDir": "../../out-tsc/lib",
-    "target": "es2022",
+    "target": "ES2022",
     "module": "ES2022",
     "lib": ["ES2022", "dom"],
     "moduleResolution": "node",

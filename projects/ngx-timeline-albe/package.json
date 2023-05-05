@@ -1,6 +1,6 @@
 {
   "name": "ngx-timeline-albe",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "Component for rendering timelines from the your data.",
   "keywords": [
     "angular",
@@ -18,7 +18,7 @@
     "url": "https://github.com/Albejr/ngx-timeline/issues"
   },
   "peerDependencies": {
-    "@angular/common": ">=15.2.6",
-    "@angular/core": ">=15.2.6"
+    "@angular/common": ">=16.0.0",
+    "@angular/core": ">=16.0.0"
   }
 }
