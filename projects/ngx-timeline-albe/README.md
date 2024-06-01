@@ -1,4 +1,4 @@
-<h1 align="center"><i>Albe Timeline <sup>1.6.0</sup></i></h1>
+<h1 align="center"><i>Albe Timeline <sup>1.7.0</sup></i></h1>
 <p align="center"><i>Albe Timeline is a simple yet highly customizable component that helps you render a responsive horizontal (or vertical) timeline from JSON data. The data will be automatically grouped by year and the events will be sorted by date.</i></p>
 
 - Content HTML highly manipulable.
@@ -8,7 +8,8 @@
 Version history:
 | Library | Angular |
 | ------- | ------- |
-| Lastet | 17.3.0 |
+| Lastet | 18.0.1 |
+| 1.6.0 | 17.3.0 |
 | 1.5.0 | 16.0.0 |
 | 1.4.1 | 15.2.6 |
 | 1.3.0 | 14.2.0 |
